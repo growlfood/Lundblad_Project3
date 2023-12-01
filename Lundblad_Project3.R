@@ -11,7 +11,6 @@ library(rsconnect)
 rsconnect::setAccountInfo(name='growlfood',
                           token='210AA88C706CE7487AD1772F92776C36',
                           secret='5ghsDbCcVCXD3yTZVtKztgMpJssZ2IXvZxPcO2PG')
-#rsconnect::deployApp('Desktop/SDS 313/Projects & Labs/Project 3')
 
 
 #Copying datasets from Project 2 to create final dataset for use in Project 3
@@ -141,6 +140,13 @@ ui <- fluidPage(
   )
 )
 
+
+
+
+
+
+
+
 #Creating server and graphs
 server <- function(input, output) {
   filtered_data <- reactive({
@@ -165,6 +171,7 @@ server <- function(input, output) {
   })
 }
 
+# Running the Shiny app
 shinyApp(ui, server)
 
 runGitHub( "Lundblad_Project3", "growlfood")
