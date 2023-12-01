@@ -141,13 +141,6 @@ ui <- fluidPage(
   )
 )
 
-
-
-
-
-
-
-
 #Creating server and graphs
 server <- function(input, output) {
   filtered_data <- reactive({
@@ -172,6 +165,6 @@ server <- function(input, output) {
   })
 }
 
-
-# Run the Shiny app
 shinyApp(ui, server)
+
+runGitHub( "Lundblad_Project3", "growlfood")
